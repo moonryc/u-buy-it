@@ -35,6 +35,7 @@ router.get('/:id', (req, res) => {
     }).then(dbTagData => {
         if (!dbTagData) {
             res.status(400).json({message: "tag not found"})
+            return
         }
         res.json(dbTagData)
     })
@@ -62,6 +63,7 @@ router.put('/:id', (req, res) => {
     }).then(dbTagData => {
         if (!dbTagData) {
             res.status(400).json({message: "tag not found"})
+            return
         }
         res.json(dbTagData)
     })
@@ -79,6 +81,7 @@ router.delete('/:id', (req, res) => {
     }).then(dbTagData => {
         if (!dbTagData) {
             res.status(400).json({message: "tag not found"})
+            return
         }
         res.json(dbTagData)
     })
